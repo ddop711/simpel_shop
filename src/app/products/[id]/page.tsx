@@ -74,7 +74,6 @@ export default function ProductDetailPage() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 items-start">
-          {/* VENSTRE SIDE: Detaljer */}
           <div className="w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-12 bg-white border border-gray-100 rounded-3xl p-8 shadow-sm">
             <div className="bg-gray-50 rounded-2xl p-8 flex items-center justify-center h-96">
               <img src={product.thumbnail} alt={product.title} className="max-w-full max-h-full object-contain" />
@@ -108,7 +107,6 @@ export default function ProductDetailPage() {
             </div>
           </div>
 
-          {/* HØJRE SIDE: Kurv */}
           <div className="w-full lg:w-1/4 bg-gray-50 border border-gray-100 p-6 rounded-2xl shadow-sm">
             <h2 className="text-xl font-bold mb-4 border-b border-gray-200 pb-2">Indkøbskurv</h2>
             {cart.length === 0 ? (

@@ -36,8 +36,6 @@ export default function ProductsPage() {
 
   const filteredProducts = products.filter((product) => {
     const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase());
-
-    // Vi hiver fat i slug eller navn alt efter hvad API'et returnerer
     const catSlug = typeof selectedCategory === "string" ? selectedCategory.toLowerCase() : "";
     const productCat = product.category ? product.category.toLowerCase() : "";
 
@@ -51,7 +49,6 @@ export default function ProductsPage() {
         <h1 className="text-4xl font-extrabold mb-10 tracking-tight">Alle produkter</h1>
 
         <div className="flex flex-col lg:flex-row gap-8 items-start">
-          {/* VENSTRE SIDE: Produkter */}
           <div className="flex-grow lg:w-3/4">
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <input type="text" placeholder="Søg efter produkter..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="border border-gray-300 rounded-lg px-4 py-3 w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-red-500 bg-white text-black" />
@@ -95,8 +92,6 @@ export default function ProductsPage() {
               ))}
             </div>
           </div>
-
-          {/* HØJRE SIDE: Kurv */}
           <div className="w-full lg:w-1/4 bg-gray-50 border border-gray-100 p-6 rounded-2xl shadow-sm">
             <h2 className="text-xl font-bold mb-4 border-b border-gray-200 pb-2">Indkøbskurv</h2>
             {cart.length === 0 ? (
