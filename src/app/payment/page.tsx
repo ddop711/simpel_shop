@@ -21,7 +21,6 @@ export default function PaymentPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Produktliste i kurven */}
             <div className="md:col-span-2 space-y-4">
               {cart.map((item) => (
                 <div key={item.id} className="flex items-center justify-between bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
@@ -41,7 +40,6 @@ export default function PaymentPage() {
               ))}
             </div>
 
-            {/* Opsummering og betaling */}
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm h-fit">
               <h2 className="text-xl font-bold mb-4">Oversigt</h2>
               <div className="flex justify-between border-b border-gray-100 pb-4 mb-4">
